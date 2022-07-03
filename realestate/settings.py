@@ -160,11 +160,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 EMAIL_PORT=587
 EMAIL_USE_TLS=True
 EMAIL_HOST='smtp.gmail.com'
-EMAIL_HOST_USER='artistkarthikeyan14@gmail.com'
-EMAIL_HOST_PASSWORD='qmtxsmzexvmacfsz'
-# EMAIL_HOST_USER=os.environ.get('EMAIL_HOST_USER')
-# EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_HOST_PASSWORD')
-
+EMAIL_HOST_USER=os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_HOST_PASSWORD')
 
 domain='127.0.0.1:8000'
 site_name='Website'
