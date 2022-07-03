@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}| Profile Page{% endblock %}
+{% block content %}
+<section id="profile" class="py-4">
+    <div class="container">
+      <div class="row">
+        <div  class="col-md-4">
+            <div id="profile_card" class="card" >
+                <img class="card-img-top" src="{{ user.profile.image.url }}" alt="Card image cap">
+                <div class="card-body">
+                <!-- <h5 class="card-title"> -->
+                    <strong>User name: &ensp;</strong>{{ user.username }}
+                <!-- </h5> -->
+                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                </div>
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Email: &ensp;</strong> {{ user.email }}</li>
+                <li class="list-group-item"><strong>First name: &ensp;</strong>{{ user.first_name }}</li>
+                <li class="list-group-item"><strong>Last name: &ensp;</strong>{{ user.last_name }}</li>
+                <li class="list-group-item"><strong>City: &ensp;</strong>{{ user.profile.city }}</li>
+                <li class="list-group-item"><strong>State: &ensp;</strong>{{ user.profile.state }}</li>
+                <li class="list-group-item"><strong>Phone: &ensp;</strong>{{ user.profile.phone }}</li>
+                <!-- <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Vestibulum at eros</li> -->
+                </ul>
+                <!-- <div class="card-body">
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h4>
+                <i class="fas fa-user"></i> Profile Info</h4>
+            </div>
+            <div class="card-body">
+                {% include 'partials/_alert.html' %}
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ u_form|crispy }}                    
+                    {{ p_form|crispy }}                  
+                    <div class="text-right">                
+                       <a href="{% url 'password_change' %}" class="btn btn-secondary text-white">Change Password</a>   
+                       <button class="btn btn-primary" type="submit">Update Profile</button>               
+                    </div>                                  
+                </form>                        
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- <section id="profile" class="py-4">
+    <div class="container">
+        <div class="row">
+           
+        </div>
+    </div>
+</section>             -->
+<br>          
+{% endblock %}
+
+

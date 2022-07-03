@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  
+<body>
+
+<h2>Request raised for your Interested Property.</h2>
+<!-- {% if listing_details %}
+  {% for listing_details in listing_details %} -->
+    <table class="gmail-table" style="border: solid 2px #DDEEEE; border-collapse: collapse; border-spacing: 0;">
+    <tr>
+      <th colspan="2" style="background-color: #DDEFEF; border: solid 1px #DDEEEE; color: #336B6B; padding: 10px; text-align: left; text-shadow: 1px 1px 1px #fff; font: Bold 16px Roboto, sans-serif;" bgcolor="#DDEFEF" align="center">Property Details</th>      
+    </tr>
+    <tr>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">Property name</td>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">{{ listing_details.title }}</td>
+    </tr>
+    <tr>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">Asking Price</td>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">₹ {{ listing_details.price }}</td>
+    </tr>
+    <tr>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">Bedrooms</td>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">{{ listing_details.bedrooms }}</td> 
+    </tr>
+    <tr>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">Bathrooms</td>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">{{ listing_details.bathrooms }}</td>
+    </tr>
+    <tr>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">Garage</td>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">{{ listing_details.garage }}</td>
+    </tr>
+    <tr>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">Square Feet</td>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">{{ listing_details.sqft }}</td> 
+    </tr>
+    <tr>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">Lot Size</td>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">{{ listing_details.lot_size }}</td> 
+    </tr>
+    <tr>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">Property Posted Date</td>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">{{ listing_details.list_date }}</td> 
+    </tr>
+    <tr>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">Realtor name</td>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">{{ listing_details.realtor.name }}</td>
+    </tr>
+    </table>
+  <!-- {% endfor %}
+{% endif %} -->
+<h4>Thanks {{ user_name }} !! for your request. Our Realtor {{ listing_details.realtor.name }} will get back to you soon.</h4>
+</body>
+</html>

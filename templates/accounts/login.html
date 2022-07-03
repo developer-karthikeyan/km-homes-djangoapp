@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}| Login Account{% endblock %}
+{% block content %}
+    <section id="login" class="bg py-5">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h4>
+                    <i class="fas fa-sign-in-alt"></i> Login</h4>
+                </div>
+                <div class="card-body">
+                    {% include 'partials/_alert.html' %}
+                    <form action="{% url 'login' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" class="form-control" required>                        
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password2">Password</label>
+                        <input type="password" name="password" class="form-control" required>
+                    </div>
+                    {% if request.GET.next %}
+                    <input type="hidden" name="next" value="{{ request.GET.next }}">
+                    {% endif %}
+                    <input type="submit" value="Login" class="btn btn-secondary btn-block">                    
+                    </form>
+                    <div>
+                        <br>
+                         <div class="col-md-6 text-left f-l">
+                            <small class="text-muted"><a href="{% url 'password_reset' %}" class="ml-2">Forgot password?</a> 
+                            </small>
+                         </div>
+                                                                                             
+                         <div class="col-md-6 text-right f-r">
+                            <small class="text-muted"><a href="{% url 'register' %}" class="ml-2">Click here to register!</a> 
+                            </small>
+                         </div>
+                    </div>
+                    
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

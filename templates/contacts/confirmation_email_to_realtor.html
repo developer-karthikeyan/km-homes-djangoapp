@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  
+<body>
+
+<h2>Request raised by our User - {{ user_details.first_name }}</h2>
+<!-- {% if listing_details %}
+  {% for listing_details in listing_details %} -->
+    <table class="gmail-table" style="border: solid 2px #DDEEEE; border-collapse: collapse; border-spacing: 0;">
+    <tr>
+      <th colspan="2" style="background-color: #DDEFEF; border: solid 1px #DDEEEE; color: #336B6B; padding: 10px; text-align: left; text-shadow: 1px 1px 1px #fff; font: Bold 16px Roboto, sans-serif;" bgcolor="#DDEFEF" align="center">User Details</th>      
+    </tr>
+    <tr>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">First name</td>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">{{ user_details.first_name }}</td>
+    </tr>
+    <tr>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">Last Name</td>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">{{ user_details.last_name }}</td>
+    </tr>
+    <tr>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">Email Address</td>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">{{ email }}</td> 
+    </tr>
+    <tr>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">Phone</td>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">{{ phone }}</td>
+    </tr>
+    <tr>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">Interested Property Name</td>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">{{ listing_details.title }}</td>
+    </tr>
+    <tr>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">Interested Property Id</td>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">{{ listing_details.id }}</td> 
+    </tr>    
+    <tr>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">Message</td>
+        <td style="border: solid 1px #DDEEEE; color: #333; padding: 10px; text-shadow: 1px 1px 1px #fff; font: normal 14px Roboto, sans-serif;">{{ message }}</td> 
+    </tr> 
+    </table>
+  <!-- {% endfor %}
+{% endif %} -->
+<h4>Kindly please work on this request & Respond back to our User.</h4>
+</body>
+</html>

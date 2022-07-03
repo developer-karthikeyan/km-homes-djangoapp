@@ -94,3 +94,139 @@ img {
     font-size: 30px; }
   #showcase-inner h1 {
     font-size: 40px; } }
+
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+#listings.py-5{
+  background: #DCDCDC;
+}
+
+#listings.py-4, #listing.py-4{
+  background: #DCDCDC;
+}
+
+#profile, #password_change, #reset_password {
+  background: #DCDCDC;
+  }
+
+.container.p-5 {
+  background: #DCDCDC;
+}
+
+#register, #login, #team.py-5 {
+  background: #DCDCDC;
+  /* color: white; */
+}
+
+#nav_titles {
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+#profile_card {
+  border: thin solid black;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.important_headings{
+  letter-spacing: 5px;
+}
+
+#about_content, #team_members {
+  background-color: #fff;
+}
+
+#showcase, #services, #about {
+  position: relative; 
+}
+
+#showcase::before {    
+  content: "";
+  background-image: url(../img/showcase.jpg);
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat; 
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.7;
+}
+
+#services::before {    
+  content: "";
+  background-image: url(../img/building.jpg);  
+  min-height: 400px;
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat; 
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
+}
+
+#about::before {    
+  content: "";
+  background-image: url(../img/building.jpg);
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat; 
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+}
+
+@media(max-width:568px){
+  #showcase::before, #services::before, #about::before{
+    background-attachment: scroll;
+  }
+}
+
+#team {    
+background: #DCDCDC;
+}
+/* #showcase .home-search .overlay{
+  position: absolute; 
+  width: 100%;
+  align-items: center;
+} */
+
+/* #all_services{
+  position: absolute; 
+  width: 100%;
+  height: 100%;
+  align-items: center;
+} */
+
+.f-l {
+  float: left;
+}
+  
+.f-r {
+  float: right;
+}

@@ -1,0 +1,108 @@
+{% load static %}
+<!-- Navbar -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary sticky-top py-0">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'index' %}">
+        <img src="{% static 'img/logo2.png' %}" class="logo" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul id="navbar-titles" class="navbar-nav">
+            <li 
+            {% if '/' == request.path %}
+              class="nav-item active mr-3"
+            {% else %}
+              class="nav-item mr-3"       
+            {% endif %}
+            >
+            <a class="nav-link" href="{% url 'index' %}">
+              <span id="nav_titles">Home</span>
+              </a>
+            </li>
+          <li 
+          {% if 'about' in request.path %}
+          class="nav-item active mr-3"
+          {% else %}
+          class="nav-item mr-3"
+          {% endif %}
+          >
+            <a class="nav-link" href="{% url 'about' %}">
+              <span id="nav_titles">About Us</span>
+              </a>
+          </li>
+          <li 
+          {% if 'listings' in request.path %}
+          class="nav-item active mr-3"
+          {% else %}
+          class="nav-item mr-3"
+          {% endif %}
+          >
+            <a class="nav-link" href="{% url 'listings' %}">
+              <span id="nav_titles">Featured Properties</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+          {% if user.is_authenticated %}
+              {% if 'dashboard' in request.path %}
+                <li class="nav-item mr-3 active">
+              {% else %}
+                <li class="nav-item mr-3">
+              {% endif %}
+                  <a class="nav-link" href="{% url 'dashboard' %}">
+                    <!-- <i class="fas fa-user-plus"></i>  -->
+                    <span id="nav_titles">Welcome {{ user.first_name }}</span>
+                    </a>
+                </li>
+
+              {% if 'profile' in request.path %}
+                <li class="nav-item mr-3 active">
+              {% else %}
+                <li class="nav-item mr-3">
+              {% endif %}
+                  <a class="nav-link" href="{% url 'profile' %}">
+                    <i class="fas fa-user"></i> 
+                  <span id="nav_titles">Profile</span>
+                  </a>
+                </li>
+
+                <li class="nav-item mr-3">
+                <a class="nav-link" href="javascript:{document.getElementById('logout').submit()}">
+                  <i class="fas fa-sign-out-alt"></i> 
+                  <span id="nav_titles">Logout</span>
+                  </a>
+                  <form action="{% url 'logout' %}" method="POST" id="logout">
+                    {% csrf_token %}
+                  </form>
+                </li>
+          {% else %}
+              {% if 'register' in request.path %}
+                <li class="nav-item mr-3 active">
+              {% else %}
+                <li class="nav-item mr-3">
+              {% endif %}
+                  <a class="nav-link" href="{% url 'register' %}">
+                    <i class="fas fa-user-plus"></i> 
+                    <span id="nav_titles">Register</span>
+                    </a>
+                </li>
+
+              {% if 'login' in request.path %}
+                <li class="nav-item mr-3 active">
+              {% else %}
+                <li class="nav-item mr-3">
+              {% endif %}
+                <a class="nav-link" href="{% url 'login' %}">
+                  <i class="fas fa-sign-in-alt"></i> 
+                  <span id="nav_titles">Login</span>
+                  </a>
+              </li>
+          {% endif %}
+        </ul>
+
+      </div>
+    </div>
+  </nav>
