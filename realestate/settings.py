@@ -20,7 +20,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-g19iqy)$x!cw_8!5*fz2_oe$g-&0=1m6s!mk7cye0h$t-9r6jc'
+# SECRET_KEY = 'django-insecure-g19iqy)$x!cw_8!5*fz2_oe$g-&0=1m6s!mk7cye0h$t-9r6jc'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -172,9 +173,9 @@ EMAIL_HOST='smtp.gmail.com'
 EMAIL_HOST_USER=os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_HOST_PASSWORD')
 
-domain='127.0.0.1:8000'
-site_name='Website'
-protocol='http'
+# domain='127.0.0.1:8000'
+# site_name='Website'
+# protocol='http'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -195,3 +196,7 @@ AWS_S3_SIGNATURE_VERSION = 's3v4' #boto3 version
 # # s3 static settings
 # # AWS_LOCATION = ''
 # STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/'
+
+# Configure Django App for Heroku.
+import django_on_heroku
+django_on_heroku.settings(locals())
