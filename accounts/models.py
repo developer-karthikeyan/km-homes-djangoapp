@@ -11,7 +11,7 @@ class Profile(models.Model):
     phone=models.CharField(max_length=20, blank=True)
 
     def __self__(self):
-        return f'{self.user} Profile'
+        return f'{self.user.username} Profile'
 
     # def save(self, *args, **kwargs): #we must add this to allow extra arguments esle while Register & Login it will throw error.
     #     super(Profile, self).save(*args, **kwargs) #It first saves all 3 given parameters in Profile page. Then it go for resizing uploaded image based on its pixel.
