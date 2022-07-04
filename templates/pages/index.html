@@ -66,58 +66,67 @@
 
   <!-- Listings -->
   <section id="listings" class="py-5">
-    <div class="container">
-      <h1 class="text-center mb-3">
-        <span class="important_headings">-:Latest Properties:-</span>
-        </h1>
-      <br>
-        <div class="row">
-          {% for listing in listings %}        
-              <!-- Listing 1 -->
-              <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card listing-preview">
-                  <img class="card-img-top" src="{{ listing.photo_main.url }}" alt="">
-                  <div class="card-img-overlay">
-                  <h2>
-                      <span class="badge badge-secondary text-white">₹ {{ listing.price | intcomma }}</span>
-                  </h2>
-                  </div>
-                  <div class="card-body">
-                  <div class="listing-heading text-center">
-                      <h4 class="text-primary">{{ listing.title }}</h4>
-                      <p>
-                      <i class="fas fa-map-marker"></i> {{ listing.address }}</p>
-                  </div>
-                  <hr>
-                  <div class="row py-2">
-                      <div class="col-6">
-                      <i class="fas fa-th-large"></i> Sqft: {{ listing.sqft }}</div>
-                      <div class="col-6">
-                      <i class="fas fa-car"></i> Garage: {{ listing.garage }}</div>
-                  </div>
-                  <div class="row py-2">
-                      <div class="col-6">
-                      <i class="fas fa-bed"></i> Bedrooms: {{ listing.bedrooms }}</div>
-                      <div class="col-6">
-                      <i class="fas fa-bath"></i> Bathrooms: {{ listing.bathrooms }}</div>
-                  </div>
-                  <hr>
-                  <div class="row py-2">
-                      <div class="col-12">
-                      <i class="fas fa-user"></i> {{ listing.realtor.name }}</div>
-                  </div>
-                  <div class="row pb-2">
-                      <div class="col-6">
-                      <i class="fas fa-clock"></i> {{ listing.list_date | naturaltime }}</div>
-                  </div>
-                  <hr>
-                  <a href="{% url 'listing' listing.id %}" class="btn btn-primary btn-block">More Info</a>
-                  </div>
-              </div>
-              </div>
-          {% endfor %}
+    {% if listings %}
+      <div class="container">
+        <h1 class="text-center mb-3">
+          <span class="important_headings">-:Latest Properties:-</span>
+          </h1>
+        <br>
+        
+          <div class="row">
+            {% for listing in listings %}        
+                <!-- Listing 1 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card listing-preview">
+                    <img class="card-img-top" src="{{ listing.photo_main.url }}" alt="">
+                    <div class="card-img-overlay">
+                    <h2>
+                        <span class="badge badge-secondary text-white">₹ {{ listing.price | intcomma }}</span>
+                    </h2>
+                    </div>
+                    <div class="card-body">
+                    <div class="listing-heading text-center">
+                        <h4 class="text-primary">{{ listing.title }}</h4>
+                        <p>
+                        <i class="fas fa-map-marker"></i> {{ listing.address }}</p>
+                    </div>
+                    <hr>
+                    <div class="row py-2">
+                        <div class="col-6">
+                        <i class="fas fa-th-large"></i> Sqft: {{ listing.sqft }}</div>
+                        <div class="col-6">
+                        <i class="fas fa-car"></i> Garage: {{ listing.garage }}</div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-6">
+                        <i class="fas fa-bed"></i> Bedrooms: {{ listing.bedrooms }}</div>
+                        <div class="col-6">
+                        <i class="fas fa-bath"></i> Bathrooms: {{ listing.bathrooms }}</div>
+                    </div>
+                    <hr>
+                    <div class="row py-2">
+                        <div class="col-12">
+                        <i class="fas fa-user"></i> {{ listing.realtor.name }}</div>
+                    </div>
+                    <div class="row pb-2">
+                        <div class="col-6">
+                        <i class="fas fa-clock"></i> {{ listing.list_date | naturaltime }}</div>
+                    </div>
+                    <hr>
+                    <a href="{% url 'listing' listing.id %}" class="btn btn-primary btn-block">More Info</a>
+                    </div>
+                </div>
+                </div>
+            {% endfor %}
+        </div>
       </div>
-    </div>
+    {% else %}
+      <div class="container">
+        <h1 class="text-center mb-3">
+          <span class="important_headings">-:Latest Properties:-</span>
+          </h1>
+          <h3>Yet to add Properties to show.</h3>
+    {% endif %}
   </section>
 
   <section id="services" class="py-5 bg-info text-white">
