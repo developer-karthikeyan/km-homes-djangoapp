@@ -176,9 +176,10 @@ EMAIL_HOST='smtp.gmail.com'
 EMAIL_HOST_USER=os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_HOST_PASSWORD')
 
-# domain='127.0.0.1:8000'
-# site_name='Website'
-# protocol='http'
+#password_reset_mail.html uses below 3 values.
+domain='km-homes-djangoapp.herokuapp.com'
+site_name='Website'
+protocol='https'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
