@@ -163,13 +163,14 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.request",
 )
 
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' #shows mail message in console itself
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend' #Must needed for PROD Mail services
 EMAIL_PORT=587
 EMAIL_USE_TLS=True
 EMAIL_HOST='smtp.gmail.com'
 EMAIL_HOST_USER=os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_HOST_PASSWORD') #Generated App Passward from Gmail
+DEFAULT_FROM_EMAIL='KM Homes Team <noreply@km-homes-djangoapp.herokuapp.com>'
 
 #password_reset_mail.html uses below 3 values.
 domain='km-homes-djangoapp.herokuapp.com'
