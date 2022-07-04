@@ -20,7 +20,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-g19iqy)$x!cw_8!5*fz2_oe$g-&0=1m6s!mk7cye0h$t-9r6jc'
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -28,9 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['km-homes-djangoapp.herokuapp.com']
 
-
 # Application definition
-
 INSTALLED_APPS = [
     'listings.apps.ListingsConfig',
     'realtor.apps.RealtorConfig',
@@ -46,7 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'crispy_forms',  # after installing "pip install django-crispy-forms" in our Venv. we should add it to apps. 
     'storages', #django-storages app for AWS s3 services
-    # 'whitenoise.runserver_nostatic',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +53,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'realestate.urls'
@@ -138,10 +133,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # whitenoise will collectstatic files from 'realestate/static' to 'staticfiles'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'realestate/static') ]
-# STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
@@ -169,7 +163,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.request",
 )
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.emailbackend'
 EMAIL_PORT=587
 EMAIL_USE_TLS=True
 EMAIL_HOST='smtp.gmail.com'
