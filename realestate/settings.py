@@ -164,7 +164,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.emailbackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.Emailbackend'
 EMAIL_PORT=587
 EMAIL_USE_TLS=True
 EMAIL_HOST='smtp.gmail.com'
