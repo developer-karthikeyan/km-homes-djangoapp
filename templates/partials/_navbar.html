@@ -10,27 +10,16 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul id="navbar-titles" class="navbar-nav">
-            <li 
-            {% if '/' == request.path %}
-              class="nav-item active mr-3"
-            {% else %}
-              class="nav-item mr-3"       
-            {% endif %}
-            >
-            <a class="nav-link" href="{% url 'index' %}">
-              <span id="nav_titles">Home</span>
-              </a>
-            </li>
           <li 
-          {% if 'about' in request.path %}
-          class="nav-item active mr-3"
+          {% if '/' == request.path %}
+            class="nav-item active mr-3"
           {% else %}
-          class="nav-item mr-3"
+            class="nav-item mr-3"       
           {% endif %}
           >
-            <a class="nav-link" href="{% url 'about' %}">
-              <span id="nav_titles">About Us</span>
-              </a>
+          <a class="nav-link" href="{% url 'index' %}">
+            <span id="nav_titles">Home</span>
+            </a>
           </li>
           <li 
           {% if 'listings' in request.path %}
@@ -40,10 +29,32 @@
           {% endif %}
           >
             <a class="nav-link" href="{% url 'listings' %}">
-              <span id="nav_titles">Featured Properties</span>
+              <span id="nav_titles">Properties</span>
             </a>
           </li>
-        </ul>
+          <li 
+          {% if 'about' in request.path %}
+          class="nav-item active mr-3"
+          {% else %}
+          class="nav-item mr-3"
+          {% endif %}
+          >
+            <a class="nav-link" href="{% url 'about' %}">
+              <span id="nav_titles">About</span>
+              </a>
+          </li>
+          <li 
+          {% if 'contact_us' in request.path %}
+          class="nav-item active mr-3"
+          {% else %}
+          class="nav-item mr-3"
+          {% endif %}
+          >
+            <a class="nav-link" href="{% url 'contact_us' %}">
+              <span id="nav_titles">Contact</span>
+              </a>
+          </li>
+      </ul>
 
         <ul class="navbar-nav ml-auto">
           {% if user.is_authenticated %}

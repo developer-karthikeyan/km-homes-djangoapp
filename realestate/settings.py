@@ -170,7 +170,7 @@ EMAIL_USE_TLS=True
 EMAIL_HOST='smtp.gmail.com'
 EMAIL_HOST_USER=os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_HOST_PASSWORD') #Generated App Passward from Gmail
-DEFAULT_FROM_EMAIL='KM Homes Team <noreply@km-homes-djangoapp.herokuapp.com>'
+EMAIL_SEND_TO_EMAIL=os.environ.get('EMAIL_SEND_TO_EMAIL')
 
 #password_reset_mail.html uses below 3 values.
 domain='km-homes-djangoapp.herokuapp.com'
