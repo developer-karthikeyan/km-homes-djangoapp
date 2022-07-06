@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 from pathlib import Path
 
+PROD="True"
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -23,9 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-ALLOWED_HOSTS = ['km-homes-djangoapp.herokuapp.com']
+if PROD == "True":
+    DEBUG = False
+    ALLOWED_HOSTS = ['km-homes-djangoapp.herokuapp.com']
+else:
+    DEBUG = True
+    ALLOWED_HOSTS = ['127.0.0.1']
 
 # Application definition
 INSTALLED_APPS = [
@@ -79,25 +83,24 @@ WSGI_APPLICATION = 'realestate.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-#DEV
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'realestate',
-#         'USER': 'postgres',
-#         'PASSWORD': 'admin',
-#         'HOST': 'localhost'
-#     }
-# }
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+if PROD == "True":
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
-
-
+else:
+    #DEV
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'realestate',
+            'USER': 'postgres',
+            'PASSWORD': 'admin',
+            'HOST': 'localhost'
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -198,5 +201,6 @@ AWS_S3_SIGNATURE_VERSION = 's3v4' #boto3 version
 # STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/'
 
 # Configure Django App for Heroku.
-import django_on_heroku
-django_on_heroku.settings(locals())
+if PROD == "True":
+    import django_on_heroku
+    django_on_heroku.settings(locals())

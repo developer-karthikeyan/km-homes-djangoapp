@@ -230,3 +230,34 @@ background: #DCDCDC;
 .f-r {
   float: right;
 }
+
+#work_content {
+  padding: 10px;
+}
+
+#main-footer{
+  padding: 20px;
+}
+
+#each_listing {
+  padding: 25px;
+}
+
+#about_content, #team_members, #home_listing {
+  padding: 20px;
+}
+
+
+#register, #login, #profile {
+  padding: 25px;
+}
+
+/* #profile_update {
+  padding: 0px 15px;
+} */
+
+@media(max-width:568px){
+  #profile_update {
+    padding: 10px 15px;
+  }
+}

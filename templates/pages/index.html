@@ -4,7 +4,7 @@
 {% block title %}| Welcome{% endblock %}
 {% block content %}
 <section id="showcase" class="bg-info">
-    <div class="container text-center">
+    <div id="home_search_box" class="container text-center">
       {% include 'partials/_alert.html' %}   
       <div class="home-search p-5">
         <div class="overlay p-5">          
@@ -76,7 +76,7 @@
           <div class="row">
             {% for listing in listings %}        
                 <!-- Listing 1 -->
-                <div class="col-md-6 col-lg-4 mb-4">
+                <div id="home_listing" class="col-md-6 col-lg-4 mb-4">
                 <div class="card listing-preview">
                     <img class="card-img-top" src="{{ listing.photo_main.url }}" alt="">
                     <div class="card-img-overlay">
