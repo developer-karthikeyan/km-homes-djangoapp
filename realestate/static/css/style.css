@@ -243,6 +243,10 @@ background: #DCDCDC;
   padding: 25px;
 }
 
+#each_listing {
+  padding: 25px;
+}
+
 #about_content, #team_members, #home_listing {
   padding: 20px;
 }
