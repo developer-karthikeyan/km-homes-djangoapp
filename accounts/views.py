@@ -42,11 +42,16 @@ def login(request):
             messages.success(request,'You are logged in successfully.')
             if 'next' in request.POST: #If 'next' value is present in POST request. Then it will get redirect like eg: return redirect('/listings/5')
                 return redirect(request.POST.get('next')) 
-            else:                
+            else:             
                 return redirect('dashboard')
         else:
+            context = {
+                'username' : username,
+                'password' : password
+            }   
             messages.error(request,'Username or Password is incorrect.')
-            return redirect('login')
+            # return redirect('login')
+            return render(request, 'accounts/login.html', context)
     else:       
         return render(request, 'accounts/login.html')
     
