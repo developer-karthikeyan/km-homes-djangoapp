@@ -1,7 +1,7 @@
-###Project:
+### Project:
 * **KM-Homes** - Aim of this application is to serve Seller, Buyer, Realtor in most efficient way.
----
-###Project Description:
+--- 
+### Project Description:
 * **KM-Homes** - Aim of this application is to serve Seller, Buyer, Realtor in most efficient way.
 ---
 <!-- ###Motivation:
@@ -11,10 +11,10 @@
 <img src='read_me_images/design_principle.jpg'/>
 
 ---
-###Frameworks & Applications used:
+### Frameworks & Applications used:
 * Django, Bootstrap, HTML, CSS, JS, Heroku, Postgresql
 ---
-###Features:
+### Features:
 * **Register** - Helps User to Create his/her account.
 * **Login** - Helps User to login his/her account.
 * **Home** - Consists of Search & Latest Property details.
@@ -24,23 +24,21 @@
 * **Dashboard** - Shows Inquired Porperty details of User.
 * **Logout** - Helps User to logout from his/her account.
 ---
-###Register - page:
+### Register - page:
 * Helps User to Create his/her account.
 
 <img src='read_me_images/basic_pages/register.png'/>
 <br>
-* Each & Every fields have its own validaition functionality. 
-eg: User should give unique name for Username.
+* Each & Every fields have its own validaition functionality. eg: User should give unique name for Username.
 
 <img src='read_me_images/validation/reg_v.png'/>
 
 ---
-###Login - page:
+### Login - page:
 * Helps User to login his/her account.
 
 <img src='read_me_images/basic_pages/login.png'/>
 <br>
-* Both fields have its own validaition functionality. 
-eg: If Username or Password is incorrect it throws error.
+* Both fields have its own validaition functionality. eg: If Username or Password is incorrect it throws error.
 
 <img src='read_me_images/validation/login_v.png'/>
