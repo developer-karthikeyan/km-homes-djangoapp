@@ -134,6 +134,7 @@
 
 * Else, If requester mentioned any invalid parameters, then he/she will get validation message.
 <img src='read_me_images/contact_us/fail.png'/>
+
 ---
 
 ### Dashboard - page:
@@ -174,7 +175,7 @@
 
 ---
 
-### Passwrod reset:
+### Password reset:
 * Helps User to reset his/her password. click "Forgot password?" from login page.
 
 <img src='read_me_images/reset_pwd/1.png'/>
@@ -221,9 +222,11 @@
 
 * Similarly, above scenario will be applicable for Unauthorized user.
 
-    https://km-homes-djangoapp.herokuapp.com/accounts/dashboard/
-    https://km-homes-djangoapp.herokuapp.com/listings/7
-    https://km-homes-djangoapp.herokuapp.com/accounts/profile/
+    * https://km-homes-djangoapp.herokuapp.com/accounts/dashboard/
+    * https://km-homes-djangoapp.herokuapp.com/listings/7
+    * https://km-homes-djangoapp.herokuapp.com/accounts/profile/
+
+* Below I have mentioned only Profile access scenario.
 
 <img src='read_me_images/unauth_protection/1.png'/>
 
