@@ -14,7 +14,7 @@
 ### Frameworks & Applications used:
 * Django, Bootstrap, HTML, CSS, JS, Heroku, Postgresql
 ---
-###Features:
+### Features:
 * **Register** - Helps User to Create his/her account.
 * **Login** - Helps User to login his/her account.
 * **Home** - Consists of Search & Latest Property details.
