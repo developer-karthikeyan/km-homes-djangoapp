@@ -29,8 +29,8 @@
 
 * Each & Every fields have its own validation functionality.
     <img src='read_me_images/registration/reg_v.png'/>
-<br>
-
+    <br>
+    
 * Successful Registration navigates User to Login page.
     <img src='read_me_images/registration/reg2.png'/>
 
@@ -40,11 +40,11 @@
 ### Login page:
 * Helps User to login his/her account.
     <img src='read_me_images/login/login1.png'/>
-<br>
+    <br>
 
 * Both fields have its own validation functionality.
     <img src='read_me_images/login/login_v.png'/>
-<br>
+    <br>
 
 * Successful Login navigates User to Dashboard page.
     <img src='read_me_images/login/login2.png'/>
@@ -55,13 +55,13 @@
 ### Home page:
 * Consists of Search & Latest Property details.
     <img src='read_me_images/home/1.png'/>
-<br>
+    <br>
 
 * Search form helps to render Properties based on search parameters.
     <img src='read_me_images/home/2.png'/>
 
     <img src='read_me_images/home/3.png'/>
-<br>
+    <br>
 
 * If none of the search criteria is mentioned, then Search form will render all Properties listed in our website.
     <img src='read_me_images/home/4.png'/>
@@ -72,33 +72,33 @@
 ### Properties page:
 * Shows List of properties for sale.
     <img src='read_me_images/properties/1.png'/>
-<br>
+    <br>
 
 * User can view interested property details by clicking "More info".
     <img src='read_me_images/properties/2.png'/>
-<br>
+    <br>
 
 * If User is interested in property, then he/she can raise Inquiry by clicking "Make an Inquiry".
     <img src='read_me_images/properties/3.png'/>
-<br>
+    <br>
 
 * If User made successful inquiry then he/she will recieve Confirmation mail from KM-Home team.
     <img src='read_me_images/properties/5.png'/>
     <img src='read_me_images/properties/6.png'/>
-<br>
+    <br>
 
 * Similarly, property's realtor will get notification mail from KM-Home team.
     <img src='read_me_images/properties/7.png'/>
     <img src='read_me_images/properties/8.png'/>
-<br>
+    <br>
 
 * If User made successful inquiry then he/she will get Success message notification.
     <img src='read_me_images/properties/success.png'/>
-<br>
+    <br>
 
 * Similarly, successfully inquired property will get added to Dashboard page.
     <img src='read_me_images/properties/9.png'/>
-<br>
+    <br>
 
 * Else, If User tries to raise multiple inquiry for same property then he/she will get Error message notification.
     <img src='read_me_images/properties/fail.png'/>
@@ -112,16 +112,16 @@
 * It helps Sellers to communicate with KM-Homes Teams.
     <img src='read_me_images/contact_us/1.png'/>
     <img src='read_me_images/contact_us/2.png'/>
-<br>
+    <br>
 
 * Requester will get notification mail from KM-Homes Teams. 
     <img src='read_me_images/contact_us/3.jpg'/>
     <img src='read_me_images/contact_us/4.png'/>
-<br>
+    <br>
 
 * If request is raised successfully, he/she will get redirected to home page.
     <img src='read_me_images/contact_us/5.png'/>
-<br>
+    <br>
 
 * Else, If requester mentioned any invalid parameters, then he/she will get validation message.
     <img src='read_me_images/contact_us/fail.png'/>
@@ -134,11 +134,11 @@
 ### Profile page:
 * Helps User to maintain his/her profile details. 
     <img src='read_me_images/profile/1.png'/>
-<br>
+    <br>
 
 * If User tries to update valid profile information, then he/she will get success notification. 
     <img src='read_me_images/profile/2.png'/>
-<br>
+    <br>
 
 * Else, User will get validation error message for respective fields.
     <img src='read_me_images/profile/3.png'/>
@@ -159,21 +159,21 @@
 ### Password reset:
 * Helps User to reset his/her password. click "Forgot password?" from login page.
     <img src='read_me_images/reset_pwd/1.png'/>
-<br>
+    <br>
 
 * User should enter his/her registered email address.
     <img src='read_me_images/reset_pwd/2.png'/>
-<br>
+    <br>
 
 * It will send "Reset Password" link to registered email address.
     <img src='read_me_images/reset_pwd/3.png'/>
     <img src='read_me_images/reset_pwd/4.png'/>
     <img src='read_me_images/reset_pwd/5.png'/>
-<br>
+    <br>
 
 * It will redirect User to "Password Reset" page.
     <img src='read_me_images/reset_pwd/6.png'/>
-<br>
+    <br>
 
 * Finally, User get success notification for password reset.
     <img src='read_me_images/reset_pwd/7.png'/>
@@ -182,11 +182,11 @@
 
 * Helps User to change his/her password. click "Change Password" from Profile page.
     <img src='read_me_images/change_pwd/1.png'/>
-<br>
+    <br>
 
 * User should enter Old & New password.
     <img src='read_me_images/change_pwd/2.png'/>
-<br>
+    <br>
 
 * Finally, It redirect User to Profile page with success message.
     <img src='read_me_images/change_pwd/3.png'/>
@@ -194,14 +194,14 @@
 ### Authorised user only have access to Dashboard/Property/Profile page:
 
 * After logout, If user trying to access Dashboard/Property/Profile page. User will get redirected to "Login Page". After successful login User will be redirected to expected page.
-<br>
+    <br>
 
 * Similarly, above scenario will be applicable for Unauthorized user.
 
     * https://km-homes-djangoapp.herokuapp.com/accounts/dashboard/
     * https://km-homes-djangoapp.herokuapp.com/listings/7
     * https://km-homes-djangoapp.herokuapp.com/accounts/profile/
-<br>
+    <br>
 
 * Below, I have mentioned only Unauthorized Profile page access scenario.
     <img src='read_me_images/unauth_protection/1.png'/>
