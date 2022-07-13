@@ -14,7 +14,7 @@
 ### Frameworks & Applications used:
 * Django, Bootstrap, HTML, CSS, JS, Heroku, Postgresql
 ---
-### Features:
+### Featured Pages:
 * **Register** - Helps User to Create his/her account.
 * **Login** - Helps User to login his/her account.
 * **Home** - Consists of Search & Latest Property details.
@@ -48,7 +48,7 @@
 <img src='read_me_images/login/login1.png'/>
 <br>
 
-* Both fields have its own validaition functionality.
+* Both fields have its own validaition check.
 
 <img src='read_me_images/login/login_v.png'/>
 
